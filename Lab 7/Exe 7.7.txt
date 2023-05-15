@@ -1,0 +1,39 @@
+import java.sql.SQLOutput;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        List<Integer> myList = new ArrayList<Integer>();
+
+        for(int i = 0 ; i < a; i++ ){
+            int data = scan.nextInt();
+            myList.add(data);
+
+        }
+        // Q nmbre of queries
+        int b = scan.nextInt();
+
+        for (int j = 0; j<b ; j++){
+
+            // insert or delete
+            String Q = scan.next();
+
+            if(Q.equals("Insert")){
+                int x = scan.nextInt(); // 5
+                int y = scan.nextInt(); // 23
+                myList.add(x, y);
+            }
+            if(Q.equals("Delete")){
+                int x = scan.nextInt(); // 0
+                myList.remove(x);
+            }
+
+        }
+        for(Integer list : myList){
+            System.out.print(+list+" ");
+        }
+
+    }
+}
