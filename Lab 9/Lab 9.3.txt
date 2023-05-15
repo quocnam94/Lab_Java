@@ -1,0 +1,51 @@
+public class ArrayCalculator {
+    public static int maxOfArray(int[] arr) {
+        int result = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > result) {
+                result = arr[i];
+            }
+        }
+        return result;
+    }
+
+    public static double maxOfArray(double[] arr) {
+        double result = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > result) {
+                result = arr[i];
+            }
+        }
+        return result;
+    }
+
+    public static int minOfArray(int[] arr) {
+        int result = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < result) {
+                result = arr[i];
+            }
+        }
+        return result;
+    }
+
+    public static double minOfArray(double[] arr) {
+        double result = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < result) {
+                result = arr[i];
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = new int[]{3, 4, 2};
+        double[] arr2 = new double[]{1.3, 4.2, 6.7};
+
+        System.out.println(ArrayCalculator.minOfArray(arr1));
+        System.out.println(ArrayCalculator.minOfArray(arr2));
+        System.out.println(ArrayCalculator.maxOfArray(arr1));
+        System.out.println(ArrayCalculator.maxOfArray(arr2));
+    }
+}

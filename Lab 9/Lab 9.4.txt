@@ -1,0 +1,44 @@
+public class Student{
+    private String name;
+    private char gender;
+    public  Student(){
+    name = "Unknown";
+    gender = 'u';
+}
+public  Student(String name){
+    this.name = name;
+    this.gender = 'u';
+}
+public  Student(char gender){
+    this.gender = gender;
+    this.name = "Unknown";
+}
+public  Student (String name, char gender){
+    this. name = name;
+    this. gender = gender;
+}
+public void display(){
+    System.out.println("Name: " + name);
+    if (gender == 'm'){
+        System.out.println ("Gender: Male");
+    }
+    if (gender == 'u'){
+        System.out.println("Gender: Unknown");
+    }
+    if (gender == 'f'){
+        System.out.println("Gender: Female");
+    }
+}
+}
+ class Entry {
+	public static void main(String[] args) {
+		Student s1 = new Student();
+		s1.display();
+		Student s2 = new Student("Quang");
+		s2.display();
+		Student s3 = new Student('m');
+		s3.display();
+		Student s4 = new Student("Thu", 'f');
+		s4.display();
+	}
+}
